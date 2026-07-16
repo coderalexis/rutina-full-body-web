@@ -212,7 +212,8 @@ h1 span { color: #efb9cc; }
   text-transform: uppercase;
 }
 .exercise-table th:first-child, .exercise-table td:first-child { width: 58px; text-align: center; }
-.exercise-table th:last-child, .exercise-table td:last-child { width: 120px; text-align: center; }
+.exercise-table th:nth-child(4), .exercise-table td:nth-child(4) { width: 120px; text-align: center; }
+.exercise-table th:last-child, .exercise-table td:last-child { width: 96px; text-align: center; }
 .exercise-table td { padding: 15px 14px; border-bottom: 1px solid #eee6e9; vertical-align: middle; }
 .exercise-table tr:last-child td { border-bottom: 0; }
 .exercise-table tbody tr { transition: background .18s ease; }
@@ -227,6 +228,24 @@ h1 span { color: #efb9cc; }
 .check-control span { display: grid; place-items: center; width: 28px; height: 28px; border: 2px solid #d9c9cf; border-radius: 9px; background: white; transition: .18s ease; }
 .check-control input:checked + span { border-color: var(--green); background: var(--green); }
 .check-control input:checked + span::after { content: "✓"; color: white; font-weight: 900; }
+.technique {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid #eed6de;
+  border-radius: 999px;
+  color: var(--brand);
+  background: #fdf6f8;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 850;
+  cursor: pointer;
+  transition: background .18s ease, border-color .18s ease, transform .18s ease;
+}
+.technique:hover { border-color: #e0bccb; background: var(--brand-soft); transform: translateY(-1px); }
+.technique svg { width: 13px; height: 13px; fill: currentColor; }
 .rest-note { display: flex; gap: 16px; margin-top: 22px; padding: 23px; border: 1px dashed #ccb6bf; border-radius: 18px; background: #fff9fb; }
 .rest-note__icon { display: grid; place-items: center; flex: 0 0 40px; height: 40px; border-radius: 12px; color: white; background: var(--brand); font-weight: 900; }
 .rest-note strong { color: var(--brand-dark); }
@@ -384,7 +403,9 @@ footer { padding-block: 28px; color: #8a8188; background: #19161b; font-size: 12
   .exercise-table td { padding: 0; border: 0; text-align: left !important; }
   .exercise-table td:first-child { position: absolute; left: 16px; top: 18px; width: auto; }
   .exercise-table td + td { margin-top: 3px; }
-  .exercise-table td:last-child { margin-top: 9px; color: var(--brand); }
+  .exercise-table td:nth-child(4) { margin-top: 9px; color: var(--brand); }
+  .exercise-table td:last-child { margin-top: 11px; }
+  .technique { min-height: 42px; padding: 0 16px; font-size: 13px; }
   .exercise-variant::before { content: "Opción: "; color: var(--ink); font-weight: 700; }
   .exercise-prescription::before { content: "Series: "; color: var(--ink); font-weight: 700; }
   .visual-grid, .info-grid { grid-template-columns: 1fr; }

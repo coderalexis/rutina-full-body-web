@@ -1,9 +1,12 @@
 # Rutina Full Body — web para GitHub Pages
 
+Publicado en: https://coderalexis.github.io/rutina-full-body-web/
+
 Sitio estático, responsivo y sin frameworks. Incluye:
 
 - Rutina de lunes, miércoles y viernes.
 - Selector entre gimnasio y casa.
+- Botón de técnica en cada ejercicio, enlazado a su animación; sigue la variante de gimnasio o casa que esté activa.
 - Progreso semanal guardado en `localStorage`.
 - Temporizador de descanso de 60, 90 y 120 segundos.
 - Guía visual con los GIF enlazados en los códigos QR del PDF.
