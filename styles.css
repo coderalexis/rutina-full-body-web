@@ -180,6 +180,28 @@ h1 span { color: #efb9cc; }
 .progress-panel strong { color: var(--brand); font-size: 22px; }
 .progress-track { height: 10px; overflow: hidden; border-radius: 999px; background: #eee7ea; }
 .progress-track span { display: block; width: 0; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--brand), #bd6887); transition: width .28s ease; }
+.routine-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 253, 251, .9);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 30px rgba(56, 32, 44, .13);
+}
+.routine-sticky__progress { display: flex; flex-direction: column; gap: 7px; min-width: 0; }
+.routine-sticky__meta { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.routine-sticky__meta span { min-width: 0; overflow: hidden; color: var(--muted); font-size: 13px; white-space: nowrap; text-overflow: ellipsis; }
+.routine-sticky__meta strong { color: var(--brand); font-size: 20px; letter-spacing: -.02em; }
+.routine-sticky #resetProgress { white-space: nowrap; }
 .routine-days { display: grid; gap: 22px; }
 .day-card {
   overflow: hidden;
@@ -395,6 +417,16 @@ footer { padding-block: 28px; color: #8a8188; background: #19161b; font-size: 12
   .summary-card strong { font-size: 25px; }
   .section { padding-block: 64px; }
   .progress-panel { grid-template-columns: 1fr; gap: 12px; }
+  .routine-sticky {
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "seg reset" "prog prog";
+    gap: 10px 12px;
+    padding: 10px 12px;
+  }
+  .routine-sticky .segmented { grid-area: seg; width: 100%; }
+  .routine-sticky .segmented__button { flex: 1; }
+  .routine-sticky #resetProgress { grid-area: reset; }
+  .routine-sticky__progress { grid-area: prog; }
   .day-card__header { align-items: flex-start; flex-direction: column; }
   .exercise-table, .exercise-table tbody, .exercise-table tr, .exercise-table td { display: block; width: 100%; }
   .exercise-table thead { display: none; }

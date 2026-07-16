@@ -64,27 +64,25 @@
 
   <main>
     <section id="rutina" class="section shell">
-      <div class="section-heading section-heading--split">
-        <div>
-          <p class="eyebrow">Tu semana de entrenamiento</p>
-          <h2>Rutina completa</h2>
-          <p>Marca cada ejercicio al terminarlo y toca «Ver» para revisar la técnica. El progreso se guarda solamente en este navegador.</p>
-        </div>
-        <div class="routine-tools">
-          <div class="segmented" role="group" aria-label="Lugar de entrenamiento">
-            <button class="segmented__button is-active" type="button" data-environment="gym" aria-pressed="true">Gimnasio</button>
-            <button class="segmented__button" type="button" data-environment="home" aria-pressed="false">Casa</button>
-          </div>
-          <button id="resetProgress" class="button button--small button--subtle" type="button">Reiniciar semana</button>
-        </div>
+      <div class="section-heading">
+        <p class="eyebrow">Tu semana de entrenamiento</p>
+        <h2>Rutina completa</h2>
+        <p>Marca cada ejercicio al terminarlo y toca «Ver» para revisar la técnica. El progreso se guarda solamente en este navegador.</p>
       </div>
 
-      <div class="progress-panel" aria-live="polite">
-        <div>
-          <span id="progressText">0 de 18 ejercicios</span>
-          <strong id="progressPercent">0%</strong>
+      <div class="routine-sticky">
+        <div class="segmented" role="group" aria-label="Lugar de entrenamiento">
+          <button class="segmented__button is-active" type="button" data-environment="gym" aria-pressed="true">Gimnasio</button>
+          <button class="segmented__button" type="button" data-environment="home" aria-pressed="false">Casa</button>
         </div>
-        <div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div>
+        <div class="routine-sticky__progress" aria-live="polite">
+          <div class="routine-sticky__meta">
+            <span id="progressText">0 de 18 ejercicios</span>
+            <strong id="progressPercent">0%</strong>
+          </div>
+          <div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div>
+        </div>
+        <button id="resetProgress" class="button button--small button--subtle" type="button">Reiniciar</button>
       </div>
 
       <div id="routineDays" class="routine-days"></div>
